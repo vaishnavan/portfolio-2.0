@@ -1,0 +1,43 @@
+{
+    "name": "portfolio-2.0",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "dev": "next dev",
+        "precommit": "lint-staged",
+        "commit": "git-cz",
+        "build": "next build",
+        "start": "next start",
+        "lint": "next lint",
+        "prepare": "husky install"
+    },
+    "dependencies": {
+        "eslint-config-next": "13.4.13",
+        "next": "13.4.13",
+        "react": "18.2.0",
+        "react-dom": "18.2.0"
+    },
+    "devDependencies": {
+        "@commitlint/cli": "^17.7.1",
+        "@commitlint/config-conventional": "^17.7.0",
+        "commitizen": "^4.3.0",
+        "cz-conventional-changelog": "^3.3.0",
+        "eslint": "^8.47.0",
+        "eslint-config-prettier": "^9.0.0",
+        "eslint-plugin-react": "^7.33.1",
+        "husky": "^8.0.0",
+        "lint-staged": "^13.2.3",
+        "prettier": "^3.0.1"
+    },
+    "lint-staged": {
+        "*.{css,less,scss,html,json,jsx,js}": [
+            "prettier --write ."
+        ],
+        "*.js": "eslint --fix"
+    },
+    "config": {
+        "commitizen": {
+            "path": "./node_modules/cz-conventional-changelog"
+        }
+    }
+}
